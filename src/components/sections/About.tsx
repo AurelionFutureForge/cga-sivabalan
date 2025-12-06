@@ -17,9 +17,9 @@ export const About = () => {
               <Heart className="w-8 h-8 text-accent" />
             </div>
 
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+            <div className="text-primary font-semibold text-sm uppercase tracking-wider">
               Our Story
-            </span>
+            </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-8">
               About Us
             </h2>
@@ -29,20 +29,20 @@ export const About = () => {
                 <span className="text-foreground font-semibold">
                   Started by students who once faced the same confusion
                 </span>{" "}
-                — the overwhelming choices, the fear of wrong decisions, and the 
+                — the overwhelming choices, the fear of wrong decisions, and the
                 pressure of shaping one's entire future in a few critical days.
               </p>
 
               <p>
-                We remember sitting in front of counselling portals, unsure which 
-                college to choose, which branch would suit us best, and whether our 
+                We remember sitting in front of counselling portals, unsure which
+                college to choose, which branch would suit us best, and whether our
                 rank was good enough. That's exactly why we built this platform.
               </p>
 
               <p>
-                Today, our team of experienced counsellors and tech enthusiasts work 
-                together to ensure no student faces that confusion alone. We combine 
-                years of admission data, expert insights, and genuine care to guide 
+                Today, our team of experienced counsellors and tech enthusiasts work
+                together to ensure no student faces that confusion alone. We combine
+                years of admission data, expert insights, and genuine care to guide
                 you towards the engineering college you truly deserve.
               </p>
 
