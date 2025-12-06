@@ -8,24 +8,36 @@ const steps = [
     title: "Register",
     description: "Sign up and share your dreams with us",
     color: "sunrise-1",
+    bgClass: "bg-sunrise-1",
+    bgOpacityClass: "bg-sunrise-1/20",
+    textClass: "text-sunrise-1",
   },
   {
     icon: MessageSquare,
     title: "Connect",
     description: "Get matched with an expert counsellor",
     color: "sunrise-2",
+    bgClass: "bg-sunrise-2",
+    bgOpacityClass: "bg-sunrise-2/20",
+    textClass: "text-sunrise-2",
   },
   {
     icon: ClipboardList,
     title: "Plan",
     description: "Receive your personalized strategy",
     color: "sunrise-3",
+    bgClass: "bg-sunrise-3",
+    bgOpacityClass: "bg-sunrise-3/20",
+    textClass: "text-sunrise-3",
   },
   {
     icon: GraduationCap,
     title: "Succeed",
     description: "Secure admission to your dream college",
     color: "sunrise-4",
+    bgClass: "bg-sunrise-4",
+    bgOpacityClass: "bg-sunrise-4/20",
+    textClass: "text-sunrise-4",
   },
 ];
 
@@ -117,16 +129,16 @@ export const HowItWorks = () => {
                   className="glass-card p-8 rounded-3xl w-full relative group"
                 >
                   {/* Step number */}
-                  <div className={`absolute -top-4 -right-4 w-10 h-10 rounded-full bg-${step.color} flex items-center justify-center text-primary-foreground font-bold text-lg shadow-lg`}>
+                  <div className={`absolute -top-4 -left-4 w-10 h-10 rounded-full ${step.bgClass} flex items-center justify-center text-primary-foreground font-bold text-lg shadow-lg`}>
                     {index + 1}
                   </div>
 
                   <motion.div
                     whileHover={{ rotate: [0, -10, 10, 0] }}
                     transition={{ duration: 0.5 }}
-                    className={`w-20 h-20 mx-auto mb-6 rounded-2xl bg-${step.color}/20 flex items-center justify-center group-hover:shadow-glow transition-shadow duration-500`}
+                    className={`w-20 h-20 mx-auto mb-6 rounded-2xl ${step.bgOpacityClass} flex items-center justify-center group-hover:shadow-glow transition-shadow duration-500`}
                   >
-                    <step.icon className={`w-10 h-10 text-${step.color}`} />
+                    <step.icon className={`w-10 h-10 ${step.textClass}`} />
                   </motion.div>
 
                   <h3 className="text-xl font-display font-semibold text-foreground mb-3">
