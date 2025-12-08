@@ -44,7 +44,7 @@ export const Contact = () => {
             Start Your Journey Today
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have questions? Ready to get started? We're here to help you 
+            Have questions? Ready to get started? We're here to help you
             achieve your engineering dreams.
           </p>
         </motion.div>
@@ -63,7 +63,7 @@ export const Contact = () => {
                 Let's Connect
               </h3>
               <p className="text-muted-foreground mb-8">
-                Fill out the form and our team will reach out within 24 hours. 
+                Fill out the form and our team will reach out within 24 hours.
                 Or contact us directly using the information below.
               </p>
             </div>
@@ -74,8 +74,10 @@ export const Contact = () => {
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-foreground">Phone</h4>
-                  <p className="text-muted-foreground">+91 98765 43210</p>
+                  <h4 className="font-medium text-foreground">Call/WhatsApp</h4>
+                  <a href="tel:+917010550170" className="text-muted-foreground hover:text-primary transition-colors">
+                    +91-7010550170
+                  </a>
                 </div>
               </div>
 
@@ -85,7 +87,9 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-foreground">Email</h4>
-                  <p className="text-muted-foreground">hello@eduguide.in</p>
+                  <a href="mailto:cgatamil@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    cgatamil@gmail.com
+                  </a>
                 </div>
               </div>
 
@@ -143,7 +147,7 @@ export const Contact = () => {
                     </label>
                     <Input
                       type="tel"
-                      placeholder="+91 98765 43210"
+                      placeholder="7010550170"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required

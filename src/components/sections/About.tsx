@@ -1,78 +1,76 @@
 import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
 
 export const About = () => {
   return (
     <section id="about" className="py-20 bg-card">
       <div className="container px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
+          {/* Centered Header Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center"
+            className="text-center mb-16"
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-2xl mb-8">
-              <Heart className="w-8 h-8 text-accent" />
-            </div>
+            {/* Badge */}
+            <span className="inline-block px-4 py-1.5 glass-card rounded-full text-sm font-medium text-primary mb-6">
+              About Dr. Sivabalan
+            </span>
 
-            <div className="text-primary font-semibold text-sm uppercase tracking-wider">
-              Our Story
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-8">
-              About Us
+            {/* Main Heading */}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
+              Dedicated to Your{" "}
+              <span className="gradient-text">Success</span>
             </h2>
 
-            <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p className="text-lg">
-                <span className="text-foreground font-semibold">
-                  Started by students who once faced the same confusion
-                </span>{" "}
-                — the overwhelming choices, the fear of wrong decisions, and the
-                pressure of shaping one's entire future in a few critical days.
-              </p>
-
-              <p>
-                We remember sitting in front of counselling portals, unsure which
-                college to choose, which branch would suit us best, and whether our
-                rank was good enough. That's exactly why we built this platform.
-              </p>
-
-              <p>
-                Today, our team of experienced counsellors and tech enthusiasts work
-                together to ensure no student faces that confusion alone. We combine
-                years of admission data, expert insights, and genuine care to guide
-                you towards the engineering college you truly deserve.
-              </p>
-
-              <p className="text-foreground font-medium text-lg">
-                Your success story is waiting to be written. Let's write it together.
-              </p>
-            </div>
-
-            <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8">
-              {[
-                { value: "5+", label: "Years Experience" },
-                { value: "1000+", label: "Students Guided" },
-                { value: "50+", label: "Partner Colleges" },
-                { value: "99%", label: "Success Rate" },
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <div className="text-3xl sm:text-4xl font-bold gradient-text mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
+            {/* Intro Paragraph */}
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              With over 15 years of experience in education and career guidance, I've helped thousands of students achieve their academic and career goals through personalized counseling and strategic planning.
+            </p>
           </motion.div>
+
+          {/* Image and Professional Journey Side by Side */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Image Section - Left */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <div className="relative rounded-3xl overflow-hidden shadow-card">
+                <img
+                  src="/sivabalan4.jpeg"
+                  alt="Dr. Sivabalan"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
+              </div>
+            </motion.div>
+
+            {/* Professional Journey Section - Right */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+            >
+              <h3 className="text-2xl font-display font-semibold text-foreground">
+                Professional Journey
+              </h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  My journey in education began with a passion for wireless communication technology, leading to advanced degrees and eventually a Ph.D. from Anna University. Over the years, I've dedicated myself to understanding not just the technical aspects of education, but the human side - helping students discover their potential and navigate their career paths.
+                </p>
+                <p>
+                  As the founder of Career Guidance Academy Tamil, I've had the privilege of working with over 15,000 students, helping them make informed decisions about their educational journey. My approach combines academic rigor with practical industry insights, ensuring students are well-prepared for their chosen careers.
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

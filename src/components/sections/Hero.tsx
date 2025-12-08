@@ -17,6 +17,7 @@ export const Hero = () => {
 
   return (
     <section
+      id="home"
       ref={containerRef}
       className="relative min-h-screen overflow-hidden"
       style={{
@@ -81,7 +82,7 @@ export const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sunrise-1 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-sunrise-1"></span>
               </span>
-              Trusted by 1000+ Students Across India
+              Trusted by 15000+ Students Across India
             </span>
           </motion.div>
 
@@ -105,7 +106,7 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed font-light"
           >
-            Cinematic guidance for your engineering journey — from confusion to clarity, 
+            Cinematic guidance for your engineering journey — from confusion to clarity,
             from rank prediction to admission success.{" "}
             <span className="text-foreground font-medium">TNEA • JEE • JoSAA</span>
           </motion.p>
