@@ -142,7 +142,7 @@ export const Hero = () => {
             <div className="grid grid-cols-3 gap-8">
               {[
                 { value: "99%", label: "Success Rate" },
-                { value: "1000+", label: "Dreams Achieved" },
+                { value: "15,000+", label: "Dreams Achieved" },
                 { value: "24/7", label: "Expert Support" },
               ].map((stat, index) => (
                 <motion.div
