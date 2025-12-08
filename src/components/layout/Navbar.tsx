@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Why Us", href: "#why-us" },
@@ -37,17 +37,14 @@ export const Navbar = () => {
       <div className="container px-4 sm:px-6">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <motion.div
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.6 }}
-              className="w-11 h-11 gradient-bg rounded-xl flex items-center justify-center shadow-soft group-hover:shadow-glow transition-shadow"
-            >
-              <Sparkles className="w-6 h-6 text-primary-foreground" />
-            </motion.div>
-            <span className="text-xl font-display font-bold text-foreground">
-              Edu<span className="gradient-text">Guide</span>
-            </span>
+          <a href="#" className="flex items-center group">
+            <motion.img
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              src="/cga-logo-bg.png"
+              alt="CGA Sivabalan"
+              className="h-16 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Navigation */}

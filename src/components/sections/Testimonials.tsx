@@ -50,7 +50,7 @@ export const Testimonials = () => {
     <section ref={containerRef} id="testimonials" className="py-24 bg-background relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-card via-background to-card opacity-50" />
-      
+
       <div className="container px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -72,10 +72,10 @@ export const Testimonials = () => {
 
         {/* Timeline testimonials */}
         <div className="relative max-w-5xl mx-auto">
-          {/* Central timeline line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent hidden lg:block" />
+          {/* Central timeline line - visible on all screens */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 sm:w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent" />
 
-          <div className="space-y-16">
+          <div className="space-y-12 sm:space-y-16">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.id}
@@ -83,28 +83,28 @@ export const Testimonials = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className={`relative flex items-center gap-8 ${
+                className={`relative flex items-center gap-4 sm:gap-8 ${
                   index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 } flex-col`}
               >
-                {/* Year badge - center on timeline */}
-                <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex">
+                {/* Year badge - center on timeline - visible on all screens */}
+                <div className="absolute left-1/2 -translate-x-1/2 flex z-10">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="w-14 h-14 rounded-full gradient-bg flex items-center justify-center text-primary-foreground font-bold text-sm shadow-glow z-10"
+                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full gradient-bg flex items-center justify-center text-primary-foreground font-bold text-xs sm:text-sm shadow-glow"
                   >
                     {testimonial.year}
                   </motion.div>
                 </div>
 
                 {/* Content card */}
-                <div className={`lg:w-[calc(50%-3rem)] w-full ${index % 2 === 0 ? "lg:pr-8" : "lg:pl-8"}`}>
+                <div className={`lg:w-[calc(50%-3rem)] w-full mt-6 sm:mt-0 ${index % 2 === 0 ? "lg:pr-8" : "lg:pl-8"}`}>
                   <motion.div
                     whileHover={{ y: -5, scale: 1.02 }}
-                    className="glass-card p-8 rounded-3xl relative group"
+                    className="glass-card p-6 sm:p-8 rounded-3xl relative group"
                   >
                     {/* Quote icon */}
-                    <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/10 group-hover:text-primary/20 transition-colors" />
+                    <Quote className="absolute top-4 right-4 sm:top-6 sm:right-6 w-8 h-8 sm:w-10 sm:h-10 text-primary/10 group-hover:text-primary/20 transition-colors" />
 
                     {/* Stars */}
                     <div className="flex gap-1 mb-4">
@@ -113,7 +113,7 @@ export const Testimonials = () => {
                       ))}
                     </div>
 
-                    <p className="text-foreground text-lg leading-relaxed mb-6 italic">
+                    <p className="text-foreground text-base sm:text-lg leading-relaxed mb-6 italic">
                       "{testimonial.quote}"
                     </p>
 
@@ -132,11 +132,6 @@ export const Testimonials = () => {
                           {testimonial.rank}
                         </p>
                       </div>
-                    </div>
-
-                    {/* Mobile year badge */}
-                    <div className="lg:hidden absolute -top-3 right-6 px-3 py-1 gradient-bg rounded-full text-primary-foreground text-xs font-bold">
-                      {testimonial.year}
                     </div>
                   </motion.div>
                 </div>
