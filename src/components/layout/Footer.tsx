@@ -1,4 +1,4 @@
-import { Instagram, Youtube, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Youtube, Linkedin, Phone, Mail, MapPin } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -35,6 +35,14 @@ export const Footer = () => {
                 className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <Youtube className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/dr-sivabalan-a-3aa51018/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
