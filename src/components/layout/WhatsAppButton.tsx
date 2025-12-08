@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
 export const WhatsAppButton = () => {
-  const phoneNumber = "919876543210"; // Replace with actual number
+  const phoneNumber = "917010550170"; // Replace with actual number
   const message = encodeURIComponent("Hi! I'm interested in counselling services for engineering admissions.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
@@ -19,7 +19,7 @@ export const WhatsAppButton = () => {
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
     >
       <MessageCircle className="w-7 h-7 text-white" />
-      
+
       {/* Pulse animation */}
       <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30" />
     </motion.a>
