@@ -106,9 +106,9 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed font-light"
           >
-            Cinematic guidance for your engineering journey — from confusion to clarity,
+            Career guidance for your engineering journey — from confusion to clarity,
             from rank prediction to admission success.{" "}
-            <span className="text-foreground font-medium">TNEA • JEE • JoSAA</span>
+            <span className="text-foreground font-medium">TNEA • JoSAA • NEET</span>
           </motion.p>
 
           {/* CTAs */}
