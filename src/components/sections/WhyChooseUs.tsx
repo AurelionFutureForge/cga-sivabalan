@@ -136,7 +136,7 @@ export const WhyChooseUs = () => {
           >
             <div className="relative w-full rounded-3xl overflow-hidden shadow-card bg-card">
               <img
-                src="/sivabalan4.jpeg"
+                src="/sivabalan12.jpeg"
                 alt="Dr. Sivabalan"
                 className="w-full h-auto object-cover rounded-3xl"
               />
