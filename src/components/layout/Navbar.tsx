@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Why Us", href: "#why-us" },
-  { name: "Services", href: "#services" },
-  { name: "Journey", href: "#how-it-works" },
-  { name: "Stories", href: "#testimonials" },
-  { name: "Pricing", href: "#pricing" },
+  { name: "Why Us", href: "#why-us", isExternal: false },
+  { name: "Services", href: "#services", isExternal: false },
+  { name: "Journey", href: "#how-it-works", isExternal: false },
+  { name: "Stories", href: "#testimonials", isExternal: false },
+  { name: "Pricing", href: "#pricing", isExternal: false },
+  { name: "Application Alerts", href: "/application-alerts", isExternal: true },
 ];
 
 export const Navbar = () => {
